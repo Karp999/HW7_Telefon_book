@@ -1,5 +1,9 @@
 import search
 import write_read_delete_change
+import logger
+import change
+import delete_change
+
 
 
 def menu():
@@ -14,7 +18,7 @@ def menu():
         case '1':
             return search.search()
         case '2':
-            return delete_change.change()
+            return change.change()
         case '3': 
             return delete_change.delete() 
         case '4':

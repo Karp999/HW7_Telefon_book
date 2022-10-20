@@ -1,5 +1,6 @@
 import UI
+import logger
 
-print('\nДобро пожаловать!\n')
+logger.print('\nДобро пожаловать!\n')
 
 UI.menu()
