@@ -1,22 +1,22 @@
-import write_read_delete_change
+import write_read
 
 def search():
     surname = input('Введите фамилию: ')
-    file = write_read_delete_change.read_file_string()
+    file = write_read.read_file_string()
     new_file = file.split()
-    print(new_file)
-    if surname in file:
-        for i in range(len(new_file)):
+    #print(new_file)
+    if surname in new_file:
+        for i in range(0, len(new_file)-1):
             if surname == new_file[i]:
                 print("yes")
-                #del new_file[i]
+                del new_file[i]
                 # del new_file[i+1]
                 # del new_file[i+2]
                 # del new_file[i+3]
     else:
        print('Контакт не найден') 
 
-
+#search()
 
 
 
