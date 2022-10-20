@@ -14,9 +14,9 @@ def menu():
         case '1':
             return search.search()
         case '2':
-            return
-        case '3':
-            return
+            return change.change()
+        case '3': 
+            return delete_change.delete() #не удаляет у меня
         case '4':
             return write_read_delete_change.write_file_string()
         case '5':
