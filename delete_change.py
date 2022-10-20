@@ -18,7 +18,28 @@ def search():
 
 
 
+"""
+def del_request(value: list):
+    """
+    Создает диалог с пользователем, для удаления
+    выбранной записи 
+    :param value: список переменных (фамилия, имя, телефон, комментарий)
+    :return: OK_RETURN/ERROR_RETURN
+    """
+    request_list = dr.request_list(di.load_data_phone(),value)
+    if len(request_list) == 0:
+        vd.print_message('НИЧЕГО НЕ НАЙДЕНО')
+        return di.OK_RETURN
+    else:
+        vd.print_data(request_list)
+    while True:
+        del_number = int(input('Введите номер записи которую нужно удалить: '))
+        if 1<=del_number<=len(request_list):
+            return dr.del_data(di.load_data_phone(),request_list[del_number-1])
+        else:
+            vd.print_inp_err()
 
+"""
 
 
 # import search
