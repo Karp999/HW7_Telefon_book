@@ -1,6 +1,5 @@
 import search
 import write_read_delete_change
-import logger
 import change
 import delete_change
 
