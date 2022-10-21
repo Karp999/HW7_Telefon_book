@@ -31,3 +31,4 @@ def read_file_column():
     with open ('Phonebook_column.csv', 'r', encoding='utf-8', newline='') as file:
         list = file.read()
         return(list)
+        

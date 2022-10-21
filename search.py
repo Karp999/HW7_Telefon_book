@@ -21,3 +21,4 @@ def search_column():
                 print(f'{new_file [i]}\n{new_file[i+1]}\n{new_file[i+2]}\n{new_file[i+3]}')
     else:
        print('Контакт не найден') 
+       

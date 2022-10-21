@@ -9,3 +9,4 @@ def get_info ():
     description = input('Введите описание: ')
     info.append(description)
     return info
+    
