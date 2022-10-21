@@ -1,6 +1,7 @@
 import search
 import write_read
 import delete_change
+import change
 
 
 def menu():
@@ -18,7 +19,7 @@ def menu():
         case '2':
             return search.search_column()
         case '3':
-            return
+            return change.askAboutChanging()
         case '4':
             return delete_change.delete()    
         case '5':
