@@ -2,6 +2,7 @@ import search
 import write_read
 import delete_change
 
+
 def menu():
     m = input('''Поиск контакта в телефонной книге 1: введите 1.
              \nПоиск контакта в телефонной книге 2: введите 2

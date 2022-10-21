@@ -1,6 +1,7 @@
 import re
 import logger
 
+
 def delete():
     with open ('Phonebook_string.csv', 'r', encoding='utf-8', newline='') as file, open  ('Phonebook_column.csv', 'r', encoding='utf-8', newline='') as file2:
         lst = file.readlines()
@@ -13,5 +14,3 @@ def delete():
                 if result is None:
                     f.write(i)
     logger.info_logger(f'Удаление записи: {pattern}')
-
-

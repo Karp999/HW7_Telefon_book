@@ -1,6 +1,7 @@
 from get_info import get_info
 import logger
 
+
 # записали введенные данные в файл в строку
 
 def write_file_string():

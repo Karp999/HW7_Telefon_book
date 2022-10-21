@@ -1,3 +1,5 @@
+
+
 def get_info ():
     info = []
     surname = input('Введите фамилию: ')

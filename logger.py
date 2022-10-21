@@ -5,3 +5,4 @@ def info_logger(info):
     with open ('phonebook_log.csv', 'a', encoding="utf-8") as file:
         file.write('{};phonebook;{}\n'
                     .format(time, info))
+
