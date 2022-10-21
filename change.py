@@ -1,6 +1,5 @@
 import write_read
 import logger
-import csv
 
 def askAboutChanging(): 
     questionC = input('''Что вы хотите изменить?
@@ -15,9 +14,11 @@ def askAboutChanging():
             with open('Phonebook_string.csv', 'r+', encoding='utf-8', newline='') as file1:
                 bookString = write_read.read_file_string()
                 record1 = bookString.split()
+                # print(type(file1))
+                # print(record1)
                 surname = input("Введите фамилию, которую желаете изменить: ") 
                 for i in range(len(record1)):
-                    if surname in record1:
+                    if surname == record1[i]:
                         newSurname = input("Введите новую фамилию абонента: ")
                         a = (bookString.replace(surname, newSurname))
                         print("Фамилия абонента успешно изменена на:", newSurname)
@@ -25,29 +26,31 @@ def askAboutChanging():
                     else:
                         break
                 logger.info_logger(f'Изменение записи: {newSurname}')
-                return  
+            return  
         case '2':
             with open('Phonebook_string.csv', 'r+', encoding='utf-8', newline='') as file1:
                 bookString = write_read.read_file_string()
                 record1 = bookString.split()
-                description = input("Введите имя, которое желаете изменить: ") 
+                # print(type(record1))
+                # print(record1)
+                name = input("Введите имя, которое желаете изменить: ") 
+                newName = input("Введите новое имя абонента: ")
                 for i in range(len(record1)):
-                    if description in record1[i]:
-                        newName = input("Введите новое имя абонента: ")
+                    if name == record1[i]:
                         b = (bookString.replace(record1[i], newName))
                         print("Имя абонента успешно изменено на:", newName)
                         file1.write(b)
                     else:
                         break
                 logger.info_logger(f'Изменение записи: {newName}')
-                return 
+            return 
         case '3': 
             with open('Phonebook_string.csv', 'r+', encoding='utf-8', newline='') as file1:
                 bookString = write_read.read_file_string()
                 record1 = bookString.split()
-                description = input("Введите номер, который желаете изменить: ") 
+                phoneNumber = input("Введите номер, который желаете изменить: ") 
                 for i in range(len(record1)):
-                    if description in record1[i]:
+                    if phoneNumber == record1[i]:
                         newNumber = input("Введите новый номер абонента: ")
                         b = (bookString.replace(record1[i], newNumber))
                         print("Номер абонента успешно изменено на:", newNumber)
@@ -55,14 +58,14 @@ def askAboutChanging():
                     else:
                         break
                 logger.info_logger(f'Изменение записи: {newNumber}')
-                return 
+            return 
         case '4':
             with open('Phonebook_string.csv', 'r+', encoding='utf-8', newline='') as file1:
                 bookString = write_read.read_file_string()
                 record1 = bookString.split()
                 description = input("Введите старое описание абонента: ") 
                 for i in range(len(record1)):
-                    if description in record1[i]:
+                    if description == record1[i]:
                         newDescription = input("Введите новое описание абонента: ")
                         b = (bookString.replace(record1[i], newDescription))
                         print("Описание абонента успешно изменено на:", newDescription)
@@ -70,6 +73,6 @@ def askAboutChanging():
                     else:
                         break
                 logger.info_logger(f'Изменение записи: {newDescription}')
-                return 
+            return 
         case '0':
             return
