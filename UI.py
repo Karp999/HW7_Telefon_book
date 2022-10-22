@@ -19,12 +19,11 @@ def menu():
             return search.search_column()
         case '3':
             return change.askAboutChanging()
-            return
         case '4':
             return delete.delete()    
         case '5':
             return write_read.write_file_string()
         case '6':
             return write_read.write_file_column()
-        case '0':
+        case '0': 
             return
